@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- <link rel="stylesheet" href="auth.css"> -->
+  <style>
+    .container {
+      padding: 80px;
+      max-width: 1270px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form {
+      text-align: center;
+      padding: 20px;
+      padding-top: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      input {
+        border: none;
+        /* removes all borders */
+        border-bottom: 2px solid #000;
+        /* only bottom border */
+        padding: 8px 4px;
+        background: transparent;
+        /* optional: no background */
+        outline: none;
+        width: 460px;
+        /* removes default outline */
+      }
+
+      .image {
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+    }
+
+    button {
+      width: 100px;
+      height: 40px;
+      background: #f14f0a;
+      border: none;
+      border-radius: 50px;
+      font-size: 20px;
+      color: white;
+      transition: 0.5s;
+    }
+
+    button:hover {
+      background: wheat;
+      color: #f14f0a;
+      transform: scale(1.05);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 20px;
+      padding: 15px 30px;
+      background-color: #fff;
+      /* or your desired background */
+
+    }
+
+    .logo a {
+      text-decoration: none;
+      font-size: 29px;
+      font-weight: bold;
+      color: green;
+      font-family: 'Poppins', cursive, sans-serif;
+      /* Stylish font */
+
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .container {
+        padding: 40px 20px;
+      }
+
+      .form input {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .form .image {
+        max-width: 300px;
+      }
+
+      .navbar {
+        padding: 10px 15px;
+        font-size: 18px;
+      }
+
+      .logo a {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px 15px;
+      }
+
+      .form {
+        padding: 15px 10px;
+      }
+
+      .form h1 {
+        font-size: 24px;
+      }
+
+      .form input {
+        width: 100%;
+        max-width: 300px;
+        padding: 6px 3px;
+      }
+
+      .form .image {
+        max-width: 250px;
+      }
+
+      button {
+        width: 90px;
+        height: 36px;
+        font-size: 18px;
+      }
+
+      .navbar {
+        padding: 8px 12px;
+        font-size: 16px;
+      }
+
+      .logo a {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .container {
+        padding: 15px 10px;
+      }
+
+      .form h1 {
+        font-size: 20px;
+      }
+
+      .form input {
+        max-width: 250px;
+      }
+
+      .form .image {
+        max-width: 200px;
+      }
+
+      button {
+        width: 80px;
+        height: 32px;
+        font-size: 16px;
+      }
+
+      .logo a {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo"><a href="index.html">FoodMess</a></div> <!-- 🔰 Logo -->
+  </nav>
+  <div class="container">
+    <div class="form">
+      <h1>Register</h1>
+      <form id="registerForm">
+
+        <input type=" text" id="name" placeholder="Your Nmae" required>
+        <br><br>
+
+
+        <input type="email" id="email" placeholder="Your Email" required>
+        <br><br>
+
+
+        <input type="password" id="password" placeholder="Password" required>
+        <br><br>
+
+        <button type="submit">Register</button>
+        <br><br>
+        <a href="login.html">I am already member</a>
+      </form>
+    </div>
+    <div class="image">
+      <img
+        src="https://static.vecteezy.com/system/resources/previews/004/491/062/non_2x/programmer-working-concept-for-web-banner-man-work-with-code-and-programming-at-computer-creates-software-modern-person-scene-illustration-in-flat-cartoon-design-with-people-characters-vector.jpg"
+        style="height: 400px;" alt="">
+
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+<script>
+  document.getElementById("registerForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    console.log("hii");
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+
+    try {
+      console.log("try");
+      const res = await fetch("http://localhost:8080/user/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password })
+      });
+      console.log(res);
+      const responseText = await res.text();
+
+      if (res.ok) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Registered successfully!',
+          text: 'You can now log in.',
+          confirmButtonText: 'Go to Login'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            console.log("Redirecting to login...");
+            window.location.href = "login.html";
+          }
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Registration Failed',
+          text: responseText || 'Please try again.'
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Server Error',
+        text: 'Unable to connect. Try again later.'
+      });
+    }
+  });
+</script>

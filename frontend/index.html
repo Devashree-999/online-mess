@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Mess</title>
+  <link rel="stylesheet" href="stle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo"><a href="#home">FoodMess</a></div> <!-- 🔰 Logo -->
+    
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <!-- <a href="findmess.html">Find mess</a> -->
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="auth.html"><button>Register</button></a>
+    </div>
+  </nav>
+
+  <div class="container" id="home">
+    <img src="messwala.png" alt="">
+    <!-- <video autoplay muted loop class="video-bg">
+    <source src="tiffinwala.mp4" type="video/mp4" />
+    -->
+    <!-- </video> -->
+  </div>
+
+  <hr>
+
+  <section class="about">
+    <h1>What We Do — Connecting People Through Food</h1>
+    <h3>FoodMess Finder is a one-stop platform that bridges the gap between mess owners and customers — helping users
+      find the right food services, and empowering mess businesses to go online.</h3>
+    <p>In many cities, especially student hubs and working colonies, people struggle to find reliable food mess
+      services. Whether it's a student new to town or a professional tired of eating out every day — the problem is the
+      same: where do I find a good, affordable, hygienic mess nearby?
+     <br>
+      At the same time, many small mess owners cook delicious, home-style food but fail to reach the right customers due
+      to lack of visibility and marketing tools.</p>
+
+    <div class="about-content">
+      <div class="about-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1_ZoVzOS6eELCdt5gIjHuKq89i4qOmNyc-Q&s" alt="">
+      </div>
+      <div class="about-points">
+        <p>That's where we come in.
+        <br><br>
+          FoodMess Finder is built to simplify this process for both:
+<br><br>
+          <b>For Customers</b>: We list multiple verified mess services based on location, allowing users to filter by food
+          type, price, distance, and more. You can read reviews, compare messes, and contact them directly — all from
+          one platform.
+<br>
+          <b>For Mess Owners</b>: We provide an easy, no-code interface for you to list your mess, add details, showcase meals,
+          and start reaching customers online. Even small local messes can now expand their reach and gain more trust
+          from users.
+<br><br>
+          Our goal is simple — connect people who need food with those who make it.
+<br><br>
+          Whether you are looking for food or serving food, this platform is designed for you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-section">
+    <h1>Why Choose FoodMess?</h1>
+    <p class="subtitle">3 features tailored for every student & worker</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="https://ouch-prod-var-cdn.icons8.com/ej/illustrations/thumbs/ufPiOOh9cPA-cwf2.webp" alt="Feature 1">
+        <h2>Personalized Suggestions</h2>
+        <p>Find mess options based on your budget, taste, and location.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="https://ouch-prod-var-cdn.icons8.com/yo/illustrations/thumbs/JBqCZekefK7QO4vg.webp" alt="Feature 2">
+        <h2>Verified & Hygienic</h2>
+        <p>We only list messes that meet hygiene and quality standards.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="https://ouch-prod-var-cdn.icons8.com/pa/illustrations/thumbs/Stqdn2TXHyyU2Ckf.webp" alt="Feature 3">
+        <h2>Quick Booking</h2>
+        <p>Subscribe or contact a mess directly from our platform in seconds.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="foodtype">
+    <div class="image-content">
+      <div class="foodtype-image">
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="">
+      </div>
+      <div class="content">
+        <h1>Wholesome & Homestyle Meals – Just Like Home</h1>
+        <p>At FoodMess Finder, we bring you access to reliable, hygienic, and affordable mess services.
+          Whether you’re a student, a working professional, or away from home — you deserve food that feels familiar,
+          filling, and fresh.
+          Our mess partners serve a variety of meals every day, prepared with love and local flavor, so you're never far
+          from a plate of good food.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img
+          src="https://media.istockphoto.com/id/2157232136/vector/north-indian-thali-meal.jpg?s=612x612&w=0&k=20&c=YZQvNV79PM7WtasDMBL99lUgARIgZFidIFdOz0RcP2I="
+          alt="">
+        <h2>Pure Veg </h2>
+        <p>Light, healthy, and made with fresh seasonal vegetables every day.
+        </p>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://www.shutterstock.com/image-vector/traditional-indian-spicy-chicken-biryani-600nw-2537942401.jpg"
+          alt="">
+        <h2>Tasty Non-Veg </h2>
+        <p>Protein-rich options like egg curry, chicken, or fish based on the menu.
+
+        </p>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://media.istockphoto.com/id/2157231879/vector/south-indian-breakfast-idli-and-vada-served-with-coconut-chutney-and-sambar.jpg?s=612x612&w=0&k=20&c=7SBOVGXr1z5cI86JRWgvhOZMaEVflgPcHMxco3i-UhE="
+          alt="">
+        <h2>South Indian Delights </h2>
+        <p>Idli, dosa, sambhar, rice – served fresh with authentic flavor.
+        </p>
+      </div>
+
+      <!-- <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStRnCY4CeybIWNgJ0rBrviHG4s69evLEZrXA&s" alt="">
+        <h2>North Indian Thali	 </h2>
+        <p>Chapati, sabzi, dal, chawal – full thali combos for lunch and dinner.
+
+        </p>
+      </div> -->
+
+      <div class="card">
+        <img
+          src="https://media.istockphoto.com/id/2157232118/vector/north-indian-thali-meal.jpg?s=2048x2048&w=is&k=20&c=5dJmlbPLURuj3XMzNqWcwajeSLroQSGS8osfz_XryDg="
+          alt="">
+        <h2>Jain-Friendly Food </h2>
+        <p>No onion, no garlic meals specially prepared to follow Jain dietary rules.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="discover">
+    <div class="find-content">
+      <h1>Find What You Need — Instantly, Intelligently</h1>
+      <h3>Discover a smarter way to access the right services with our data-driven matching system. Whether it's food
+        mess, service providers, or insights, we've got you covered.</h3>
+      <p>Welcome to FoodMess — your go-to platform for instant and intelligent search results. We offer tailored
+        suggestions based on your needs using smart filters and a vast network of verified providers. Whether you’re a
+        student searching for the nearest food mess or a user looking for customized solutions, we help you connect
+        quickly and effortlessly.
+        Save time, avoid the hassle, and get straight to the right results with our intuitive dashboard and
+        user-friendly process.</p>
+    </div>
+    <div class="find-img">
+      <img
+        src="https://static.vecteezy.com/system/resources/previews/005/611/296/non_2x/mobile-smartphone-with-food-delivery-app-order-food-online-modern-creative-data-graphic-design-on-the-application-flat-style-cartoon-illustration-free-vector.jpg"
+        alt="">
+    </div>
+  </section>
+
+  <section class="steps">
+
+    <div class="steps-cards">
+      <div class="st-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThJ3mgZ7Pn_Dfr1HFeqpGoC68cA_F0wod4_A&s" alt="">
+        <h3> Step 1: Search Nearby Messes</h3>
+        <p>Enter your location or allow GPS to explore all mess services around you.</p>
+      </div>
+
+      <div class="st-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRomwTYBVadip6PZi2tpqs2zmYRTPsU2q_CWQ&s" alt="">
+        <h3> Step 2: Compare & Choose</h3>
+        <p>Check ratings, view menu, pricing, and distance — all in one place.</p>
+      </div>
+
+      <div class="st-card">
+        <img src="https://img.freepik.com/premium-vector/order-confirmed-concept-illustration_353829-159.jpg" alt="">
+        <h3> Step 3: Connect or Subscribe</h3>
+        <p>Call, WhatsApp, or register with your preferred mess in one click.</p>
+      </div>
+    </div>
+
+    <div class="steps-content">
+      <h1>How It Works </h1>
+      <h2>Simple 3-Step Process</h2>
+    </div>
+  </section>
+
+  <section class="dual-section">
+
+    <div class="overlay-content">
+      <h2>Built for Both: Customers & Mess Owners</h2>
+      <p>Whether you're looking for a mess or running one, FoodMess Finder gives you the tools you need to connect,
+        grow, and thrive.</p>
+      <section class="image">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/039/373/811/non_2x/online-farm-organic-food-shopping-on-smartphone-vector.jpg"
+          alt="">
+      </section>
+      <div class="dual-columns">
+        <div class="column">
+          <h3>🍽️ For Customers</h3>
+          <p>Tired of roaming around to find a reliable mess? We've made it easier for you.
+            Our platform brings together all nearby mess services in one place, so you don’t need to waste time
+            searching door to door or asking around. You can explore multiple mess options, check the food type, view
+            pricing, read user reviews, and even contact the mess owner — all in just a few clicks.
+            Whether you're a student, working professional, or someone staying away from home, this is your go-to hub to
+            discover affordable and hygienic food messes around you.</p>
+        </div>
+        <div class="column">
+          <h3>🏠 For Mess Owners</h3>
+          <p>Running a mess but struggling to reach more people? We’re here to help.
+            This platform is specially created for small and local mess owners who want to grow their business online
+            without the hassle of technical knowledge or costly advertising.
+            Many messes provide great food but remain hidden due to lack of visibility — that changes now.
+            With FoodMess Finder, you can easily create your listing, showcase your food, prices, and contact info, and
+            start getting customers directly.
+            Get the recognition your mess deserves and build a loyal customer base online.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Hamburger Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
