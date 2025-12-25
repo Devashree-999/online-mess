@@ -118,17 +118,20 @@
             max-width: 100vw;
             overflow-x: hidden;
             padding: 20px 10px;
+            box-sizing: border-box;
+        }
 
-            input {
+        .search-bar input {
                 border-radius: 50px;
-                width: 60vw;
-                max-width: 100%;
+                width: calc(100% - 110px);
+                max-width: 60vw;
                 height: 40px;
                 transition: 0.5s;
                 padding: 0 15px;
+                box-sizing: border-box;
             }
 
-            button {
+        .search-bar button {
                 border-radius: 50px;
                 color: white;
                 background: orangered;
@@ -137,19 +140,19 @@
                 height: 45px;
                 font-size: 20px;
                 transition: 0.5s;
+                box-sizing: border-box;
             }
 
-            button:hover {
+            .search-bar button:hover {
                 background: wheat;
                 color: #f14f0a;
                 transform: scale(1.05);
             }
 
-            input:hover {
+            .search-bar input:hover {
                 transform: scale(1.01);
                 border: 1px solid;
             }
-        }
 
         .search-bar.active {
             position: fixed;
@@ -238,20 +241,22 @@
             width: 100%;
             max-width: 100vw;
             overflow: hidden;
-            min-height: calc(100vh - 60px);
             height: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: block;
+            line-height: 0;
+            font-size: 0;
         }
 
         .search-bg img {
-                width: 100%;
-                height: auto;
-                max-width: 100%;
-                max-height: calc(100vh - 60px);
-                object-fit: contain;
-                display: block;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
+            display: block;
+            margin: 0;
+            padding: 0;
+            vertical-align: bottom;
+        }
         }
 
         .search-bg.blur {
@@ -297,8 +302,13 @@
                 padding: 8px 12px;
             }
 
+            .search-bar {
+                padding: 15px 10px;
+            }
+
             .search-bar input {
-                width: 75vw;
+                width: calc(100% - 110px);
+                max-width: calc(75vw - 110px);
                 height: 38px;
                 font-size: 16px;
             }
@@ -345,14 +355,14 @@
             }
 
             .search-bg {
-                min-height: calc(100vh - 150px);
+                height: auto;
                 padding: 0;
+                margin: 0;
             }
 
             .search-bg img {
                 width: 100%;
                 max-width: 100%;
-                max-height: calc(100vh - 150px);
                 height: auto;
                 object-fit: contain;
             }
@@ -398,22 +408,22 @@
             }
 
             .search-bar {
-                padding: 0 15px;
+                padding: 15px 10px;
+                box-sizing: border-box;
             }
 
             .search-bar input {
-                width: calc(100% - 30px);
-                max-width: 100%;
+                width: calc(100% - 90px);
+                max-width: calc(100% - 90px);
                 height: 36px;
                 font-size: 14px;
                 padding: 5px 10px;
             }
 
             .search-bar button {
-                width: 70px;
+                width: 75px;
                 height: 36px;
                 font-size: 16px;
-                margin-top: 10px;
             }
 
             .search-bar.active {
@@ -459,16 +469,19 @@
             }
 
             .search-bg {
-                min-height: calc(100vh - 180px);
                 padding: 0;
+                margin: 0;
+                height: auto;
+                line-height: 0;
             }
 
             .search-bg img {
                 width: 100%;
                 max-width: 100%;
-                max-height: calc(100vh - 180px);
-                height: calc(100vh - 250px);
+                height: auto;
                 object-fit: contain;
+                display: block;
+                vertical-align: top;
             }
         }
 
