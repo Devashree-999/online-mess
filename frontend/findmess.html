@@ -624,7 +624,7 @@
 
     }
 
-    fetch("http://localhost:8080/mess/find").then((res) => res.json()).then((data) => {
+    fetch("https://online-mess-backend.onrender.com/mess/find").then((res) => res.json()).then((data) => {
         console.log(data);
 
 
@@ -635,7 +635,7 @@
         document.querySelector(".search").style.display = "none";
         document.querySelector(".search-bg").style.display = "none";
 
-        await fetch("http://localhost:8080/mess/find").then((res) => res.json()).then((data) => {
+        await fetch("https://online-mess-backend.onrender.com/mess/find").then((res) => res.json()).then((data) => {
             console.log(data);
 
 
@@ -704,7 +704,7 @@
     async function adduser(id, button) {
         const name = localStorage.getItem("name")
         try {
-            const res = await fetch(`http://localhost:8080/mess/subscribe/${id}`, {
+            const res = await fetch(`https://online-mess-backend.onrender.com/mess/subscribe/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"
@@ -725,7 +725,7 @@
         const name = localStorage.getItem("name");
 
         try {
-            const res = await fetch(`http://localhost:8080/mess/unsubscribe/${id}`, {
+            const res = await fetch(`https://online-mess-backend.onrender.com/mess/unsubscribe/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"
@@ -749,7 +749,7 @@
         const token = localStorage.getItem("token")
         const name = localStorage.getItem("name")
 
-        const res = await fetch(`http://localhost:8080/user/find`, {
+        const res = await fetch(`https://online-mess-backend.onrender.com/user/find`, {
             method: "GET",
             headers: {
                 "authorization": token

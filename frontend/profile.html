@@ -250,7 +250,7 @@
       }
 
       try {
-        const res = await fetch(`http://localhost:8080/mess/profile?email=${encodeURIComponent(email)}`);
+        const res = await fetch(`https://online-mess-backend.onrender.com/mess/profile?email=${encodeURIComponent(email)}`);
         const data = await res.json();
 
         if (!res.ok) {
